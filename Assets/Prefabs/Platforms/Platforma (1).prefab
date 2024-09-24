@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9028230548117981615}
-  - component: {fileID: 2986855512210530041}
+  - component: {fileID: 5796513978402427990}
   m_Layer: 6
   m_Name: Platforma (1)
   m_TagString: Untagged
@@ -298,7 +298,7 @@ Transform:
   - {fileID: 3192518128853323911}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2986855512210530041
+--- !u!114 &5796513978402427990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7226007902004537326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef3eb4ef6b21f724584470b696f0f387, type: 3}
+  m_Script: {fileID: 11500000, guid: 75276774d6f54b74a8054dc739e36458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _begin: {fileID: 567255119495257785}
