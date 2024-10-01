@@ -4,7 +4,7 @@ public abstract class GivesBuff : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent(out IBuffPicker buffPicker))
+        if (other.TryGetComponent(out IBuffPicker buffPicker))
         {
             Affect(buffPicker);
 
@@ -14,3 +14,4 @@ public abstract class GivesBuff : MonoBehaviour
 
     protected abstract void Affect(IBuffPicker buffPicker);
 }
+    

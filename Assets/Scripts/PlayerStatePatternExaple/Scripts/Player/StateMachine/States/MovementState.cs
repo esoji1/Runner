@@ -28,7 +28,7 @@ public abstract class MovementState : IState
     public void HandleInput()
     {
         Data.ZInput = ReadHorizontalInput();
-        Data.ZVelocity = Data.ZInput * Data.Speed;
+        Data.ZVelocity = Data.ZInput * Data.SpeedHorizontal;
     }
 
 

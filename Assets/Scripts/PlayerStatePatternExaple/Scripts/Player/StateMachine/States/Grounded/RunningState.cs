@@ -10,7 +10,7 @@ public class RunningState : GroundedState
     {
         base.Enter();
 
-        Debug.Log(Data.Speed);
+        Debug.Log(Data.SpeedHorizontal);
 
         View.StartRunning();
     }

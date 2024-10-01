@@ -21,7 +21,6 @@ public class PlatformSpawner : ISpawners
 
     public void Spawner()
     {
-        Debug.Log("Спавн");
         if (_player.Transform.position.x > _spawnedChunked[_spawnedChunked.Count - 1].And.position.x - _platformSpawnDistance)
         {
             Chunk newChunk = Object.Instantiate(_chunkPrefabs);

@@ -1,12 +1,12 @@
 using System;
-using UnityEngine;
 
-public class StateMachineData : MonoBehaviour
+public class StateMachineData
 {
     public float ZVelocity;
     public float YVelocity;
 
-    private float _speed = 30;
+    private float _speedHorizontal = 30;
+    private float _speedSlap = 30;
     private float _zInput;
 
     public float ZInput
@@ -21,15 +21,27 @@ public class StateMachineData : MonoBehaviour
         }
     }
 
-    public float Speed
+    public float SpeedHorizontal
     {
-        get => _speed;
+        get => _speedHorizontal;
         set
         {
             if (value < 0)
-                throw new ArgumentOutOfRangeException(nameof(_speed));
+                throw new ArgumentOutOfRangeException(nameof(_speedHorizontal));
         
-            _speed = value;
+            _speedHorizontal = value;
+        }
+    }
+
+    public float SpeedSlap
+    {
+        get => _speedSlap;
+        set
+        {
+            if (value < 0)
+                throw new ArgumentOutOfRangeException(nameof(_speedSlap));
+
+            _speedSlap = value;
         }
     }
 }
