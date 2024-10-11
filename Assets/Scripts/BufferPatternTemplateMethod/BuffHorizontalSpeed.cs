@@ -1,4 +1,4 @@
-public class BuffIncreasingHorizontalSpeed : GivesBuff
+public class BuffHorizontalSpeed : GivesBuff
 {
     private float _speedHorizonal = 15;
 

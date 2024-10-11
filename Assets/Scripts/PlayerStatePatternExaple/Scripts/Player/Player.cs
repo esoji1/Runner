@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IBuffPicker, IMovable
+public class Player : MonoBehaviour, IBuffPicker, IMovable, IDamage
 {
     [SerializeField] private PlayerView _playerView;
     [SerializeField] private PlayerConfig _config;
@@ -10,14 +10,18 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
     private PlayerInput _input;
     private PlayerStateMachine _stateMachine;
     private StateMachineData _data;
+    private Health _health;
 
     public event Action<float> OnSpeedChanged;
+
+    public event Action<int> OnAddHealth;
 
     public PlayerInput Input => _input;
     public PlayerConfig Config => _config;
     public PlayerView View => _playerView;
     public GroundChecker GroundChecker => _groundChecker;
     public Transform Transform => transform;
+    public int Health => _health.HealthValue;
 
     [SerializeField] private float _speed = 30f;
     [SerializeField] private float horizontalSpeed = 30f;
@@ -27,6 +31,7 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
 
     private void Awake()
     {
+        _health = new Health(100);
         _data = new StateMachineData();
         _distanceTraveled.Initialize(_data);
         _playerView.Initialize();
@@ -56,5 +61,16 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
     {
         _data.SpeedHorizontal += speedMovementHorizontal;
         horizontalSpeed += speedMovementHorizontal;
+    }
+
+    public void Damage(int damage)
+    {
+        _health.TakeDamage(damage);
+    }
+
+    public void AddHealth(int health)
+    {
+        OnAddHealth?.Invoke(health);
+        _health.AddHealth(health);
     }
 }

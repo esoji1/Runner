@@ -1,4 +1,4 @@
-public class BuffIncreasinglSpeedLine : GivesBuff
+public class BuffSpeedLine : GivesBuff
 {
     private float _speed = 10f;
 

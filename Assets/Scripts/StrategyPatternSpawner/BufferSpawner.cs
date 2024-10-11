@@ -22,7 +22,7 @@ public class BufferSpawner : ISpawners
     public void Spawner()
     {
         int randomIndex = Random.Range(0, _points.Length);
-        int randomIndexBufPrefab = Random.Range(0, 2);
+        int randomIndexBufPrefab = Random.Range(0, 3);
         _timer += Time.deltaTime;
 
         if (_timer > _spawnInterval)

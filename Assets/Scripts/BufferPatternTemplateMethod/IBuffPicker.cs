@@ -4,4 +4,5 @@ public interface IBuffPicker
     float SpeedMovementHorizontal { get; }
     void AddSpeed(float speed);
     void AddSpeedHorizonal(float speedMovementHorizontal);
+    void AddHealth(int health);
 }
