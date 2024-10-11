@@ -9,7 +9,7 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
     [SerializeField] private DistanceTraveled _distanceTraveled;
     private PlayerInput _input;
     private PlayerStateMachine _stateMachine;
-    private StateMachineData Data;
+    private StateMachineData _data;
 
     public event Action<float> OnSpeedChanged;
 
@@ -27,11 +27,11 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
 
     private void Awake()
     {
-        Data = new StateMachineData();
-        _distanceTraveled.Initialize(Data);
+        _data = new StateMachineData();
+        _distanceTraveled.Initialize(_data);
         _playerView.Initialize();
         _input = new PlayerInput();
-        _stateMachine = new PlayerStateMachine(this, Data);
+        _stateMachine = new PlayerStateMachine(this, _data);
     }
 
     private void Update()
@@ -48,13 +48,13 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable
     public void AddSpeed(float speed)
     {
         OnSpeedChanged!.Invoke(speed);
-        Data.SpeedSlap += speed;
+        _data.SpeedSlap += speed;
         _speed += _speed;
     }
 
     public void AddSpeedHorizonal(float speedMovementHorizontal)
     {
-        Data.SpeedHorizontal += speedMovementHorizontal;
+        _data.SpeedHorizontal += speedMovementHorizontal;
         horizontalSpeed += speedMovementHorizontal;
     }
 }
