@@ -14,6 +14,7 @@ public class ClickText : MonoBehaviour
                 if (hit.collider.TryGetComponent(out Play play))
                 {
                     SceneManager.LoadScene(1);
+                    Time.timeScale = 1.0f;
                 }
                 else if (hit.collider.TryGetComponent(out Settings settings))
                 {
