@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _exit: {fileID: 1294575629}
+  _lossView: {fileID: 1622735977}
 --- !u!4 &514851116
 Transform:
   m_ObjectHideFlags: 0
@@ -2737,7 +2738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ee7eb95efea304081ad6179e52afa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imageloss: {fileID: 1622735975}
+  _bodyAlphaGroup: {fileID: 1460220413}
+  _body: {fileID: 1460220410}
+  _obstacleDetection: {fileID: 2000563486}
+  _fallDetection: {fileID: 1589416479}
 --- !u!1 &1651363714
 GameObject:
   m_ObjectHideFlags: 0

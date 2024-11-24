@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,8 +21,15 @@ public class Restart : MonoBehaviour
 
     private void RestartsScene()
     {
+        _lossView.Hide(() => _lossView.gameObject.SetActive(false));
+
+        StartCoroutine(RestartAfterDelay(1f));
+    }
+
+    private IEnumerator RestartAfterDelay(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
         SceneManager.LoadScene(1);
-        _lossView.Hide();
         Time.timeScale = 1.0f;
     }
 }

@@ -14,6 +14,8 @@ public class ObstacleDetection : MonoBehaviour
 
     public event Action<int> OnDamageHealthPlayer;
 
+    public event Action OnDed;
+
     public int Health => _player.Health;
 
     private void OnTriggerEnter(Collider other)
@@ -48,6 +50,9 @@ public class ObstacleDetection : MonoBehaviour
     private void EnableMenuLoss()
     {
         if (_player.Health <= 0)
-            _lossView.Show();
+        {
+            _lossView.gameObject.SetActive(true);
+            OnDed?.Invoke();
+        }
     }
 }
