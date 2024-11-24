@@ -48,6 +48,6 @@ public class ObstacleDetection : MonoBehaviour
     private void EnableMenuLoss()
     {
         if (_player.Health <= 0)
-            _lossView.ActiveMenuLoss();
+            _lossView.Show();
     }
 }

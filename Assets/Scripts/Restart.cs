@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Restart : MonoBehaviour
 {
-    [SerializeField] private GameObject _image;
+    [SerializeField] private LossView _lossView;
     [SerializeField] private Button _buttonRestart;
 
     private void OnEnable()
@@ -20,7 +20,7 @@ public class Restart : MonoBehaviour
     private void RestartsScene()
     {
         SceneManager.LoadScene(1);
-        _image.SetActive(false);
+        _lossView.Hide();
         Time.timeScale = 1.0f;
     }
 }

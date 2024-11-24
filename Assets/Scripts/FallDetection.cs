@@ -15,6 +15,6 @@ public class FallDetection : MonoBehaviour
     private void DidThePlayerFall()
     {
         if (_player.Transform.position.y <= _losingPosition)
-            _lossView.ActiveMenuLoss();
+            _lossView.Show();
     }
 }

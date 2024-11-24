@@ -2234,14 +2234,13 @@ GameObject:
   - component: {fileID: 1374864027}
   - component: {fileID: 1374864029}
   - component: {fileID: 1374864028}
-  - component: {fileID: 1374864030}
   m_Layer: 5
-  m_Name: LossPanelView
+  m_Name: LossPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1374864027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2253,14 +2252,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1460220410}
-  m_Father: {fileID: 1908175403}
+  m_Children: []
+  m_Father: {fileID: 1622735976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.035}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1820, y: 980.6963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374864028
 MonoBehaviour:
@@ -2300,19 +2298,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374864026}
   m_CullTransparentMesh: 1
---- !u!114 &1374864030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374864026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ee7eb95efea304081ad6179e52afa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _imageloss: {fileID: 1374864026}
 --- !u!1 &1436154696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,6 +2463,7 @@ GameObject:
   - component: {fileID: 1460220410}
   - component: {fileID: 1460220412}
   - component: {fileID: 1460220411}
+  - component: {fileID: 1460220413}
   m_Layer: 5
   m_Name: LossMenu
   m_TagString: Untagged
@@ -2492,7 +2478,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460220409}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0003055043, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.784107, y: 8.784107, z: 8.784107}
   m_ConstrainProportionsScale: 0
@@ -2500,11 +2486,11 @@ RectTransform:
   - {fileID: 824112248}
   - {fileID: 1198182820}
   - {fileID: 86076888}
-  m_Father: {fileID: 1374864027}
+  m_Father: {fileID: 1622735976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 4.7731}
+  m_AnchoredPosition: {x: 0.0029466876, y: 4.7731}
   m_SizeDelta: {x: 123.436, y: 97.1993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460220411
@@ -2545,6 +2531,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460220409}
   m_CullTransparentMesh: 1
+--- !u!225 &1460220413
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460220409}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1483800999
 GameObject:
   m_ObjectHideFlags: 3
@@ -2642,7 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1439740458}
-  _lossView: {fileID: 1374864030}
+  _lossView: {fileID: 1622735977}
 --- !u!4 &1589416480
 Transform:
   m_ObjectHideFlags: 0
@@ -2689,6 +2687,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898543191}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1622735975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622735976}
+  - component: {fileID: 1622735977}
+  m_Layer: 5
+  m_Name: Loss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1622735976
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622735975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1374864027}
+  - {fileID: 1460220410}
+  m_Father: {fileID: 1908175403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1622735977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622735975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ee7eb95efea304081ad6179e52afa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageloss: {fileID: 1622735975}
 --- !u!1 &1651363714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,7 +3125,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1374864027}
+  - {fileID: 1622735976}
   - {fileID: 1194978344}
   - {fileID: 378575028}
   m_Father: {fileID: 0}
@@ -3333,7 +3382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1439740458}
-  _lossView: {fileID: 1374864030}
+  _lossView: {fileID: 1622735977}
   _pfefabDestroy: {fileID: 5125283125585522785, guid: 55d9c9ac85453ec4eb93d06370d4e7bf, type: 3}
   _audio: {fileID: 1841052757}
   _explosionForce: 10000
@@ -3479,7 +3528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c61a2fbf483a9a4c91d6925ede33c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _image: {fileID: 1374864026}
+  _lossView: {fileID: 1622735977}
   _buttonRestart: {fileID: 1003040275}
 --- !u!4 &2122589489
 Transform:
