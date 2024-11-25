@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObstacleDetection : MonoBehaviour
 {
-    [SerializeField] private Player _player;  
+    [SerializeField] private Player _player;
     [SerializeField] private LossView _lossView;
     [SerializeField] private GameObject _pfefabDestroy;
     [SerializeField] private AudioSource _audio;
@@ -39,7 +39,7 @@ public class ObstacleDetection : MonoBehaviour
             Destroy(obstacle.gameObject);
 
             _audio.Play();
-            
+
             _player.Damage(_damageObstacle);
             OnDamageHealthPlayer?.Invoke(_damageObstacle);
 

@@ -29,5 +29,6 @@ public class ExitToGameMenu : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delay);
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 }
