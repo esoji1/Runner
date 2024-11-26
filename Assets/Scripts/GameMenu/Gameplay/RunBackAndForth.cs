@@ -4,8 +4,8 @@ public class RunBackAndForth : MonoBehaviour
 {
     [SerializeField] private float _speed;
     
-    private float _leftLimit = -110f;
-    private float _rightLimit = 110f;
+    private float _leftLimit = 0f;
+    private float _rightLimit = 110;
     private bool _isMovingLeft = true;
 
     private void Update()

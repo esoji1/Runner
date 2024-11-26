@@ -1,3 +1,6 @@
+using Assets.Scripts;
+using System;
+
 public interface IBuffPicker : IAudioEffect
 {
     float Speed { get; }

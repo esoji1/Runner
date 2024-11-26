@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class GivesBuff : MonoBehaviour
@@ -7,14 +8,14 @@ public abstract class GivesBuff : MonoBehaviour
         if (other.TryGetComponent(out IBuffPicker buffPicker))
         {
             PlaySoundEffect(buffPicker);
-            
+
             Affect(buffPicker);
-            
+
             Destroy(gameObject);
         }
     }
 
     protected abstract void Affect(IBuffPicker buffPicker);
-    
+
     protected abstract void PlaySoundEffect(IBuffPicker audio);
 }
