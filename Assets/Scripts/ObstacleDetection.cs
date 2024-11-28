@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-
 public class ObstacleDetection : MonoBehaviour
 {
     [SerializeField] private Player _player;
@@ -13,7 +12,6 @@ public class ObstacleDetection : MonoBehaviour
     private int _damageObstacle = 20;
 
     public event Action<int> OnDamageHealthPlayer;
-
     public event Action OnDed;
 
     public int Health => _player.Health;

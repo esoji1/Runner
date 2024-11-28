@@ -12,7 +12,7 @@ public class SpawnerConfigurator : MonoBehaviour
 
     public void Spawner()
     {
-        foreach (var spawner in _spawners)
+        foreach (ISpawners spawner in _spawners)
         {
             spawner.Spawner();
         }
@@ -20,7 +20,7 @@ public class SpawnerConfigurator : MonoBehaviour
 
     public void RemoveObjects()
     {
-        foreach (var spawner in _spawners)
+        foreach (ISpawners spawner in _spawners)
         {
             spawner.RemoveObjects();
         }

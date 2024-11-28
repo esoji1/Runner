@@ -25,6 +25,11 @@ public class ClickText : MonoBehaviour
                 if (hit.collider.TryGetComponent(out Settings settings))
                 {
                 }
+
+                if (hit.collider.TryGetComponent(out Exit exit))
+                {
+                    Application.Quit();
+                }
             }
         }
     }
