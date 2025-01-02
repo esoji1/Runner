@@ -1,12 +1,12 @@
 using System;
 
-public class Health 
+public class Health
 {
     private int _health;
 
     public Health(int health)
     {
-        if(health < 0)
+        if (health < 0)
             throw new ArgumentException(nameof(health));
 
         _health = health;
@@ -24,9 +24,11 @@ public class Health
 
     public void AddHealth(int value)
     {
-        if(value < 0)
+        if (value < 0)
             throw new ArgumentException(nameof(value));
 
-        _health += value;
+        if (_health < 100)
+            _health += value;
+
     }
 }

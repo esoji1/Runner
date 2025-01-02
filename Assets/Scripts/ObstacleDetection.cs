@@ -20,7 +20,7 @@ public class ObstacleDetection : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Obstacle obstacle))
         {
-            GameObject spawnedObject = Instantiate(_pfefabDestroy, obstacle.transform.position, Quaternion.identity, null);
+            GameObject spawnedObject = Instantiate(_pfefabDestroy, obstacle.Position.position, Quaternion.identity, null);
 
             Rigidbody[] rigidbodies = spawnedObject.GetComponentsInChildren<Rigidbody>();
 
@@ -28,7 +28,7 @@ public class ObstacleDetection : MonoBehaviour
             {
                 if (rb != null)
                 {
-                    Vector3 randomDirection = (rb.transform.position - obstacle.transform.position).normalized + UnityEngine.Random.insideUnitSphere;
+                    Vector3 randomDirection = (rb.transform.position - obstacle.Position.position).normalized + UnityEngine.Random.insideUnitSphere;
 
                     rb.AddForce(randomDirection * _explosionForce);
                 }

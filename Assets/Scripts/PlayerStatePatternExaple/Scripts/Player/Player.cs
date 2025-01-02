@@ -61,14 +61,14 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable, IDamage
     public void AddSpeed(float speed)
     {
         OnSpeedChanged?.Invoke(speed);
-        OnPickedUpBuff?.Invoke(Buff.BuffSpeedLine, 10f);
+        OnPickedUpBuff?.Invoke(Buff.BuffSpeedLine, speed);
         _data.SpeedSlap += speed;
         _speed += _speed;
     }
 
     public void AddSpeedHorizonal(float speedMovementHorizontal)
     {
-        OnPickedUpBuff?.Invoke(Buff.BuffHorizontalSpeed, 15f);
+        OnPickedUpBuff?.Invoke(Buff.BuffHorizontalSpeed, speedMovementHorizontal);
         _data.SpeedHorizontal += speedMovementHorizontal;
         horizontalSpeed += speedMovementHorizontal;
     }
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour, IBuffPicker, IMovable, IDamage
 
     public void AddHealth(int health)
     {
-        OnPickedUpBuff?.Invoke(Buff.BuffAddHealth, 20f);
+        OnPickedUpBuff?.Invoke(Buff.BuffAddHealth, health);
         OnAddHealth?.Invoke(health);
         _health.AddHealth(health);
     }

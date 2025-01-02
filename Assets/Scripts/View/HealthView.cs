@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,13 +48,19 @@ public class HealthView : MonoBehaviour
     }
 
     private void AddHealh(int health)
-    {
+    { 
         KillAnimatonAddHealth();
 
-        _hp += health;
+        ReduceLessNumber(health);
 
         _animation = _health
             .DOFillAmount(_hp / 100f, 1f)
             .SetEase(Ease.OutQuad);
+    }
+
+    private void ReduceLessNumber(int health)
+    {
+        if (_hp < 100)
+            _hp += health;
     }
 }
