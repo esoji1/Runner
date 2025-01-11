@@ -1,3 +1,9 @@
+## Пример игры:
+
+![](https://github.com/esoji1/RunnerUnity6/blob/master/ReadmeAssets/Runner%202025-01-02%2021-27-53%20(online-video-cutter.com).gif?raw=true)
+
+---
+
 # Описание игры
 
 **Игра, созданная одним разработчиком**, погружает игроков в увлекательный мир преодоления преград и достижения новых вершин.
@@ -11,12 +17,6 @@
 - **Собирайте усиления**:
   - Лекарства для восстановления здоровья.
   - Бустеры для ускорения движения.
-
-## Пример игры:
-
-![](https://github.com/esoji1/RunnerUnity6/blob/master/ReadmeAssets/Runner%202025-01-02%2021-27-53%20(online-video-cutter.com).gif?raw=true)
-
----
 
 ### Используемые технологии
 - **Unity**
